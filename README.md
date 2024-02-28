@@ -28,7 +28,7 @@ In addition to the main goals (quick to stand-up, easy to add content), I wanted
 
 ## To Do
 
-- Create Github Issues for each of the following to-do items:
+- ~~Create Github Issues for each of the following to-do items:~~
 - Modify existing pages to suit my needs
   - About
   - Home / Index
