@@ -1,17 +1,22 @@
-name: ci
+name: build-deploy
 
 on:
-  # push:
-  #   branches: [main]
-  pull_request:
+  push:
     branches: [main]
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
-  lint:
-    name: Check for build and type issues
+  lint-build-deploy:
+    name: Check for build and type issues, then deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -52,3 +57,19 @@ jobs:
         # ensure build works
       - name: Run build
         run: pnpm build
+
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Deploy to S3
+        run: aws s3 sync ./src/. s3://chase-slept-study-log
+
+    #   - name: Purge CDN / Cloudflare
+    #   uses: jakejarvis/cloudflare-purge-action@v0.3.0
+    #   env:
+    #     CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE }}
+    #     CLOUDFLARE_TOKEN: ${{ secrets.CF_TOKEN }}
