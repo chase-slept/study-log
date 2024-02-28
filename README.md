@@ -29,7 +29,7 @@ In addition to the main goals (quick to stand-up, easy to add content), I wanted
 ## To Do
 
 - Create Github Issues for each of the following to-do items:
-  -Modify existing pages to suit my needs
+- Modify existing pages to suit my needs
   - About
   - Home / Index
   - Blog / Posts (start with deleting template posts)
