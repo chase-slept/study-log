@@ -23,6 +23,7 @@ pnpm-debug.log*
 *.pem
 .cache
 .astro
+.vscode
 
-# lock file
+# lock file (to avoid errors when checking out on remote hosts)
 package-lock.json
