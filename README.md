@@ -33,6 +33,6 @@ In addition to the main goals (quick to stand-up, easy to add content), I wanted
   - About
   - Home / Index
   - Blog / Posts (start with deleting template posts)
-- Configure DNS (Cloudflare) A Record to new host (AWS)
+- ~~Configure DNS (Cloudflare) A Record to new host (AWS)~~
 - Enable Cloudflare Cache Purge in deploy action
-- Add links between main website and this website
+- ~~Add links between main website and this website~~
