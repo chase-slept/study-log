@@ -37,8 +37,12 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/about/",
 	},
 	{
-		title: "Blog",
+		title: "Log",
 		path: "/posts/",
+	},
+	{
+		title: "Back to Project Blog",
+		path: "https://slept.dev",
 	},
 ];
 
