@@ -7,59 +7,25 @@ import { getAllPosts, sortMDByDate } from "@/utils";
 const MAX_POSTS = 15;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-// Not using at the moment
-// const cactusTech: { desc: string; href: string; title: string }[] = [
-// 	{
-// 		desc: "Build fast websites, faster.",
-// 		href: "https://astro.build",
-// 		title: "Astro",
-// 	},
-// 	{
-// 		desc: "Rapidly build modern websites without ever leaving your HTML.",
-// 		href: "https://tailwindcss.com",
-// 		title: "Tailwind CSS",
-// 	},
-// 	{
-// 		desc: "Simple and easy-to-use markup language.",
-// 		href: "https://www.markdownguide.org/",
-// 		title: "Markdown",
-// 	},
-// 	{
-// 		desc: "Markdown for the component era.",
-// 		href: "https://mdxjs.com/",
-// 		title: "MDX",
-// 	},
-// 	{
-// 		desc: "Generating png Open Graph images for blog posts.",
-// 		href: "https://github.com/vercel/satori",
-// 		title: "Satori",
-// 	},
-// 	{
-// 		desc: "A fully static search library.",
-// 		href: "https://pagefind.app/",
-// 		title: "Pagefind",
-// 	},
-// 	{
-// 		desc: "An easy to use Icon component for Astro.",
-// 		href: "https://github.com/natemoo-re/astro-icon#readme",
-// 		title: "Astro Icon",
-// 	},
-// 	{
-// 		desc: "Highly customisable source code & syntax highlighter",
-// 		href: "https://expressive-code.com/",
-// 		title: "Expressive Code",
-// 	},
-// ];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6">Hello World!</h1>
+		<h1 class="title mb-6">Hello, interested party!</h1>
 		<p class="mb-4">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illum amet nisi error
-			dignissimos enim fuga quia eum sequi molestiae quibusdam nostrum voluptatum, a eaque dolor,
-			molestias debitis commodi nihil!
+			You've found your way to my study logs. The intent of this page is to indescriminately
+			dump study notes, questions, ideas, etc., about whatever I'm currently studying. 
+			It will be messy and unorganized, probably wrong, maybe inconsistent, and definitely 
+			boring (maybe). Don't worry about it too much---I'm not! 
+		</p>
+		<p>
+			The goal is to post regularly to serve as a personal accountability tool, reference
+			material, and a measure of progress. I've never really logged my study sessions in
+			the past, but as the topics I study become increasingly complex and demanding, I've
+			found that the occassional notes I've been taking aren't enough. They get lost in a
+			notebook that's stashed in a drawer that I forget to update and review. Making posts
+			here with markup is quick, easy, and low-friction, as I already have the tools ready
+			at my disposal while I'm studying. 
 		</p>
 		<SocialList />
 	</section>
@@ -75,25 +41,4 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 	</section>
-	<!-- Not sure I'll need this right now
-	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<dl class="space-y-4">
-			{
-				cactusTech.map(({ desc, href, title }) => (
-					<div class="flex flex-col gap-2 md:flex-row">
-						<dt>
-							<span class="flex">
-								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
-				))
-			}
-		</dl>
-	</section> -->
 </PageLayout>
