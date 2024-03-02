@@ -32,14 +32,13 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Home",
 		path: "/",
 	},
-	// Don't think I'll use the About page for now
-	// {
-	// 	title: "About",
-	// 	path: "/about/",
-	// },
 	{
 		title: "Study Logs",
 		path: "/posts/",
+	},
+	{
+		title: "Goals",
+		path: "/goals/",
 	},
 	{
 		title: "Back to Projects",
