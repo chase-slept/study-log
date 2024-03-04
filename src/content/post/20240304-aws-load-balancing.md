@@ -12,7 +12,7 @@ ALBs can use **path patterns** [which are a lot like Caddy's *handle_path* direc
 
 ALBs handle HTTP/HTTPS traffic **ONLY!** For other protocols, a **Network Load Balancer** can be used. NLBs operate at the connection level of the OSI model, Layer 4. This allows for high performance routing--**millions of low-latency requests per second**. Unlike Layer 7, Layer 4 cannot make use of intelligent routing features. All traffic from the listener is sent to the target group, no rules or priority. NLBs can make use of other protocols: TCP, UDP, TCP/UDP, and TLS (for SSL connections). NLBs can use any port within the standard port range.
 
-Lastly, **Classic Load Balancers** are often used for testing and development; they are very easy to deploy and operate at both Layer 4 and Layer 7. They can make use of Sticky Sessions and X-Forwarded headers, to keep track of user sessions and origin IPs. Classic's listeners also uses HTTP/HTTPS. 
+Lastly, **Classic Load Balancers** are often used for testing and development; they are very easy to deploy and operate at both Layer 4 and Layer 7. They can make use of Sticky Sessions and X-Forwarded headers, to keep track of user sessions and origin IPs. Classic's listeners also uses HTTP/HTTPS.
 
 ## Things to Review/Note
 
