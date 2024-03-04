@@ -3,7 +3,6 @@ title: "3/4 Session 1 - AWS Load Balancing"
 publishDate: "04 March 2024"
 description: "This study session was about Load Balancing: ALB, NLB, and Classic LB."
 tags: ["ALB, NLB, Load Balancing, AWS"]
-draft: true
 ---
 ## What I learned
 
