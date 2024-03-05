@@ -2,7 +2,7 @@
 title: "3/4 Session 2 - AWS CloudWatch"
 publishDate: "04 March 2024"
 description: "Second study session of the day--this one covered CloudWatch and related services"
-tags: ["CloudWatch, AWS"]
+tags: ["CloudWatch", "AWS"]
 ---
 *(posted retroactively on 3/5)*
 
