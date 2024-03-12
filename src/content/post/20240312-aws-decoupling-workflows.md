@@ -1,8 +1,8 @@
 ---
 title: "3/12 Session 1 - AWS: Decoupling Workflows"
 publishDate: "12 March 2024"
-description: "Study session about decoupling workflows in AWS"
-tags: ["AWS", "sqs", "sns", "api gateway"]
+description: "Study session about decoupling workflows in AWS using ELB, SQS and other services"
+tags: ["AWS", "elb", "sqs", "sns", "api gateway"]
 ---
 
 **Tight Coupling** is when our workflow has one EC2 instance directly communicating with another EC2 instance, such as a frontend instance and a backend instance. With this architecture, if either instance is down it directly affects the other. In contrast, **Loose Coupling** is when a service sits in between, such as an **Elastic Load Balancer (ELB)**, SQS/SNS instance, or an API Gateway. In this architecture, the user-request would hit the ELB first instead of the frontend EC2 instance; the ELB would direct the request to one of many frontend EC2 instances (high availability) and from there it would be sent to a second load balancer. This ELB would direct the request to one of many backend EC2 instances. A key point to remember is that decoupling should happen at every level, such as seen with the frontend and backend instances. We don't want to have a single instance as a failure point for the whole workflow.
